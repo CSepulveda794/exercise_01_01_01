@@ -5,7 +5,13 @@
 
 
 var fs = require('fs'); //loading in file system
-var data = fs.readdirSync('\/'); //holds what we read from the file system, its reading directly from our home directory
 
-console.log("data: ", data); //output our results
+//calls me back when im done and throws it back after the readir 
+fs.readdir('\/', function(err, data){
+    console.log("data: ", data); //output our results
+});
+
+  
+
+
 console.log("This code is executed last.");//checkiing to see when things execute
